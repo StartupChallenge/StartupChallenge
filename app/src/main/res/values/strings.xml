@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Sulivan</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="session_chatbot">챗봇</string>
+    <string name="session_sentences">문장</string>
+    <string name="session_pronunciation">발음법</string>
+    <string name="session_syllable">음절</string>
+    <string name="session_settings">설정</string>
+</resources>
