@@ -37,7 +37,7 @@
             android:text="@string/session_settings" />
     </com.google.android.material.tabs.TabLayout>
 
-    <com.hoonhooney.sulivan.SwipeViewPager
+    <com.hoonhooney.sullivan.SwipeViewPager
         android:id="@+id/viewPager_session"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

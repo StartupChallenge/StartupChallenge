@@ -1,10 +1,10 @@
-package com.hoonhooney.sulivan.fragments;
+package com.hoonhooney.sullivan.fragments;
 
 import android.os.Bundle;
 
 import androidx.preference.PreferenceFragmentCompat;
 
-import com.hoonhooney.sulivan.R;
+import com.hoonhooney.sullivan.R;
 
 public class SettingsFragment extends PreferenceFragmentCompat {
 

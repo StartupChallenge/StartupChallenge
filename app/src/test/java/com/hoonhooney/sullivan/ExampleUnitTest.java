@@ -1,4 +1,4 @@
-package com.hoonhooney.sulivan;
+package com.hoonhooney.sullivan;
 
 import org.junit.Test;
 

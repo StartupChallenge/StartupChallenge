@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Sulivan</string>
+    <string name="app_name">Sullivan</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <!-- Preference Titles -->
@@ -10,12 +10,15 @@
     <string name="signature_title">Your signature</string>
     <string name="reply_title">Default reply action</string>
 
+    <string name="on_back_pressed">뒤로가기를 한 번 더 누르면 앱이 종료됩니다.</string>
+
     <!-- Sync Preferences -->
     <string name="sync_title">Sync email periodically</string>
     <string name="attachment_title">Download incoming attachments</string>
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
     <string name="session_chatbot">챗봇</string>
     <string name="session_sentences">문장</string>
     <string name="session_pronunciation">발음법</string>

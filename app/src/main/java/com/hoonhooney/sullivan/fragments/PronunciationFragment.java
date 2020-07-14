@@ -1,4 +1,4 @@
-package com.hoonhooney.sulivan.fragments;
+package com.hoonhooney.sullivan.fragments;
 
 import android.os.Bundle;
 
@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.hoonhooney.sulivan.R;
+import com.hoonhooney.sullivan.R;
 
 public class PronunciationFragment extends Fragment {
 
