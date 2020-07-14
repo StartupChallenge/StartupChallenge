@@ -11,6 +11,7 @@
     <string name="reply_title">Default reply action</string>
 
     <string name="on_back_pressed">뒤로가기를 한 번 더 누르면 앱이 종료됩니다.</string>
+    <string name="try_record">아래 녹음 버튼을 누르고 글자를 읽어보세요!</string>
 
     <!-- Sync Preferences -->
     <string name="sync_title">Sync email periodically</string>
@@ -24,4 +25,7 @@
     <string name="session_pronunciation">발음법</string>
     <string name="session_syllable">음절</string>
     <string name="session_settings">설정</string>
+
+    <string name="consonant">자음</string>
+    <string name="vowel">모음</string>
 </resources>

@@ -4,7 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".activities.MainActivity">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/splash_img"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -22,19 +32,47 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <Button
+            <FrameLayout
                 android:id="@+id/btn_syllable"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="SessionClick"
-                android:text="@string/session_syllable" />
+                android:layout_margin="20dp"
+                android:onClick="SessionClick">
 
-            <Button
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/shape_button_round"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:text="@string/session_syllable"
+                    android:textStyle="bold"/>
+            </FrameLayout>
+
+            <FrameLayout
                 android:id="@+id/btn_pronunciation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="SessionClick"
-                android:text="@string/session_pronunciation" />
+                android:layout_margin="20dp"
+                android:onClick="SessionClick">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/shape_button_round"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:text="@string/session_pronunciation"
+                    android:textStyle="bold"/>
+            </FrameLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -43,26 +81,54 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <Button
+            <FrameLayout
                 android:id="@+id/btn_sentences"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="SessionClick"
-                android:text="@string/session_sentences" />
+                android:layout_margin="20dp"
+                android:onClick="SessionClick">
 
-            <Button
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/shape_button_round"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:text="@string/session_sentences"
+                    android:textStyle="bold"/>
+            </FrameLayout>
+
+            <FrameLayout
                 android:id="@+id/btn_chatbot"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="SessionClick"
-                android:text="@string/session_chatbot" />
+                android:layout_margin="20dp"
+                android:onClick="SessionClick">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/shape_button_round"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:text="@string/session_chatbot"
+                    android:textStyle="bold"/>
+            </FrameLayout>
 
         </LinearLayout>
 
         <ImageView
             android:id="@+id/btn_settings"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_gravity="center"
             android:onClick="SessionClick"
             android:src="@drawable/ic_settings_black" />

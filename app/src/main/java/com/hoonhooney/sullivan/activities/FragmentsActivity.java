@@ -80,9 +80,7 @@ public class FragmentsActivity extends AppCompatActivity
     public class PagerAdapter extends FragmentStatePagerAdapter {
         int _numOfTabs;
         List<Fragment> fragments = new ArrayList<Fragment>();
-        String[] titles = new String[]{getString(R.string.session_syllable),
-                getString(R.string.session_pronunciation), getString(R.string.session_sentences),
-                getString(R.string.session_chatbot), getString(R.string.session_settings)};
+        String[] titles = getResources().getStringArray(R.array.sessions);
 
         public PagerAdapter(FragmentManager fm, int numOfTabs) {
             super(fm);
