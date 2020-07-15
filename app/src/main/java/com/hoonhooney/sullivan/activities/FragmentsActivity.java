@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.google.android.material.tabs.TabLayout;
+import com.hoonhooney.sullivan.CharacterListDialog;
 import com.hoonhooney.sullivan.R;
 import com.hoonhooney.sullivan.SwipeViewPager;
 import com.hoonhooney.sullivan.fragments.ChatbotFragment;
@@ -24,7 +25,7 @@ import java.util.List;
 import java.util.Stack;
 
 public class FragmentsActivity extends AppCompatActivity
-        implements ViewPager.OnPageChangeListener {
+        implements ViewPager.OnPageChangeListener, CharacterListDialog.CharItemClickListener {
     static final String TAG = "TAG : FragmentsActivity";
 
     private TabLayout tabLayout;
@@ -76,7 +77,10 @@ public class FragmentsActivity extends AppCompatActivity
 
     }
 
-//    PagerAdapter
+//    fragment에서 pageStack 불러오기 위한 getter
+    public Stack<Integer> getPageStack(){return pageStack;}
+
+    //    PagerAdapter
     public class PagerAdapter extends FragmentStatePagerAdapter {
         int _numOfTabs;
         List<Fragment> fragments = new ArrayList<Fragment>();
@@ -124,6 +128,21 @@ public class FragmentsActivity extends AppCompatActivity
 
     @Override
     public void onPageScrollStateChanged(int state) {}
+
+//    SyllableFragment에서 연 CharacterListDialog 결과값 전달
+    @Override
+    public void onItemClicked(char result, String style) {
+        Log.d(TAG, "result : "+result);
+
+        if (style.equals(getString(R.string.consonant))) {
+            ((SyllableFragment)pagerAdapter.fragments.get(0)).textView_consonant.setText(""+result);
+            //그림과 설명 바뀜 추가
+        }
+        else{
+            ((SyllableFragment)pagerAdapter.fragments.get(0)).textView_vowel.setText(""+result);
+            //그림과 설명 바뀜 추가
+        }
+    }
 
 //    뒤로가기 누르면 stack에서 현재 session 정보를 pop
     @Override

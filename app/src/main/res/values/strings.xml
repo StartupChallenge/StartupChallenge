@@ -11,7 +11,9 @@
     <string name="reply_title">Default reply action</string>
 
     <string name="on_back_pressed">뒤로가기를 한 번 더 누르면 앱이 종료됩니다.</string>
-    <string name="try_record">아래 녹음 버튼을 누르고 글자를 읽어보세요!</string>
+    <string name="try_record">아래 녹음 버튼을 누르고 \n글자를 읽어보세요!</string>
+    <string name="feedback_good">잘했어요! \n그 발음 기억해서 잘 사용하세요!</string>
+    <string name="feedback_bad">조금 부정확해요ㅠㅠ. \n다시 한 번 시도해보세요!</string>
 
     <!-- Sync Preferences -->
     <string name="sync_title">Sync email periodically</string>
@@ -28,4 +30,7 @@
 
     <string name="consonant">자음</string>
     <string name="vowel">모음</string>
+
+    <string name="char_consonants">ㄱ ㄲ ㄴ ㄷ ㄸ ㄹ ㅁ ㅂ ㅃ ㅅ ㅆ ㅇ ㅈ ㅉ ㅊ ㅋ ㅌ ㅍ ㅎ</string>
+    <string name="char_vowels">ㅏ ㅐ ㅑ ㅒ ㅓ ㅔ ㅕ ㅖ ㅗ ㅘ ㅙ ㅚ ㅛ ㅜ ㅝ ㅞ ㅟ ㅠ ㅡ ㅢ ㅣ</string>
 </resources>
