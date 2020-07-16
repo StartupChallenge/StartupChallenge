@@ -1,6 +1,5 @@
 package com.hoonhooney.sullivan.fragments;
 
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
@@ -18,7 +17,6 @@ import androidx.fragment.app.Fragment;
 
 import com.hoonhooney.sullivan.CharacterListDialog;
 import com.hoonhooney.sullivan.R;
-import com.hoonhooney.sullivan.activities.FragmentsActivity;
 
 import java.util.ArrayList;
 
@@ -27,10 +25,9 @@ public class SyllableFragment extends Fragment
     static final String TAG = "TAG : SyllableFragment";
 
     private FrameLayout btnRecord, input_consonant, input_vowel;
-    private TextView textView_result;
     public TextView textView_consonant, textView_vowel,
             textView_explain_consonant, textView_explain_vowel,
-            textView_feedback;
+            textView_feedback, textView_result;
     public ImageView imageView_consonant, imageView_vowel;
 
     private String strForATry;

@@ -136,6 +136,9 @@ public class FragmentsActivity extends AppCompatActivity
             //그림과 설명 바뀜 추가
             syllableFragment.textView_explain_vowel.setText(getString(resId));
         }
+
+        syllableFragment.textView_feedback.setText("");
+        syllableFragment.textView_result.setText(getString(R.string.try_record));
     }
 
 //    뒤로가기 누르면 stack에서 현재 session 정보를 pop
