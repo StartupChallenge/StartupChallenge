@@ -127,7 +127,7 @@ public class SyllableFragment extends Fragment
         startActivityForResult(intent, 2);
     }
 
-//    녹음 결과에 대한 피드백 제공
+//    녹음 결과에 대한 feedback 제공
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode, resultCode, data);
