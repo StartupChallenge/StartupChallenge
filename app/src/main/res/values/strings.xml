@@ -33,4 +33,47 @@
 
     <string name="char_consonants">ㄱ ㄲ ㄴ ㄷ ㄸ ㄹ ㅁ ㅂ ㅃ ㅅ ㅆ ㅇ ㅈ ㅉ ㅊ ㅋ ㅌ ㅍ ㅎ</string>
     <string name="char_vowels">ㅏ ㅐ ㅑ ㅒ ㅓ ㅔ ㅕ ㅖ ㅗ ㅘ ㅙ ㅚ ㅛ ㅜ ㅝ ㅞ ㅟ ㅠ ㅡ ㅢ ㅣ</string>
+
+    <string name="ㄱ">입천장 뒷부분을 혀의 뒷부분으로 막은 다음 공기로 열면서 소리를 냅니다.</string>
+    <string name="ㄲ">\'ㄱ\' 발음을 더 세게 발음합니다.</string>
+    <string name="ㄴ">입천장 앞부분 전체를 혀의 앞부분 전체로 막고 열면서 소리를 냅니다.</string>
+    <string name="ㄷ">\'ㄴ\' 발음에서 혀를 열 때 공기를 넣어서 소리를 냅니다.</string>
+    <string name="ㄸ">\'ㄷ\' 발음을 더 세게 발음합니다.</string>
+    <string name="ㄹ">입천장 앞 끝부분에 혀 끝부분을 차면서 소리를 냅니다.</string>
+    <string name="ㅁ">윗, 아렛입술을 다문 다음 열면서 소리를 냅니다.</string>
+    <string name="ㅂ">\'ㅁ\'발음에서 입을 열 때 공기를 넣어서 소리를 냅니다.</string>
+    <string name="ㅃ">\'ㅂ\' 발음을 더 세게 발음합니다.</string>
+    <string name="ㅅ">양 입술을 벌리고 이를 다문 상태에서 혀 끝부분을 이 앞쪽으로 가까이 한 다음 공기를 넣어 소리를 냅니다.</string>
+    <string name="ㅆ">\'ㅅ\' 발음을 더 세게 발음합니다.</string>
+    <string name="ㅇ">입을 벌려서 소리를 냅니다.</string>
+    <string name="ㅈ">\'ㅅ\' 발음에서 혀 끝부분을 이에 맞닿은 상태로 소리를 냅니다.</string>
+    <string name="ㅉ">\'ㅈ\' 발음을 더 세게 발음합니다.</string>
+    <string name="ㅊ">\'ㅈ\' 발음에 공기를 더 넣어 소리를 냅니다.</string>
+    <string name="ㅋ">\'ㄱ\' 발음에 공기를 더 넣어 소리를 냅니다.</string>
+    <string name="ㅌ">\'ㄷ\' 발음에 공기를 더 넣어 소리를 냅니다.</string>
+    <string name="ㅍ">\'ㅂ\' 발음에 공기를 더 넣어 소리를 냅니다.</string>
+    <string name="ㅎ">\'ㅇ\' 발음에 공기를 더 넣어 소리를 냅니다.</string>
+
+    <string name="ㅏ">입을 웃는 표정처럼 양 볼에서 당기듯이 벌리고 혀를 뒤쪽으로 위치한 상태로 소리를 냅니다.</string>
+    <string name="ㅐ">입을 편한 상태로 벌리고 혀를 앞쪽으로 위치한 상태로 소리를 냅니다.</string>
+    <string name="ㅑ">\'ㅣ\' 발음을 짧게 한 뒤 \'ㅏ\' 발음을 합니다.</string>
+    <string name="ㅒ">\'ㅣ\' 발음을 짧게 한 뒤 \'ㅐ\' 발음을 합니다.</string>
+    <string name="ㅓ">\'ㅏ\' 발음에서 입술을 동그랗게 벌린 상태로 소리를 냅니다.</string>
+    <string name="ㅔ">\'ㅐ\' 발음보다 입을 더 작게 벌린 상태로 소리를 냅니다.</string>
+    <string name="ㅕ">\'ㅣ\' 발음을 짧게 한 뒤 \'ㅓ\' 발음을 합니다.</string>
+    <string name="ㅖ">\'ㅣ\' 발음을 짧게 한 뒤 \'ㅔ\' 발음을 합니다.</string>
+    <string name="ㅗ">바람 불듯이 입술을 동그랗게 모으고 입 안쪽은 벌린 상태로 소리를 냅니다.</string>
+    <string name="ㅘ">\'ㅗ\' 발음을 짧게 한 뒤 \'ㅏ\' 발음을 합니다.</string>
+    <string name="ㅙ">\'ㅗ\' 발음을 짧게 한 뒤 \'ㅐ\' 발음을 합니다.</string>
+    <string name="ㅚ">\'ㅗ\' 발음을 짧게 한 뒤 \'ㅔ\' 발음을 합니다.</string>
+    <string name="ㅛ">\'ㅣ\' 발음을 짧게 한 뒤 \'ㅗ\' 발음을 합니다.</string>
+    <string name="ㅜ">바람 불듯이 입술을 동그랗게 모으고 입 안쪽은 거의 닫힌 상태로 소리를 냅니다.</string>
+    <string name="ㅝ">\'ㅜ\' 발음을 짧게 한 뒤 \'ㅓ\' 발음을 합니다.</string>
+    <string name="ㅞ">\'ㅜ\' 발음을 짧게 한 뒤 \'ㅔ\' 발음을 합니다.</string>
+    <string name="ㅟ">\'ㅜ\' 발음을 짧게 한 뒤 \'ㅣ\' 발음을 합니다.</string>
+    <string name="ㅠ">\'ㅣ\' 발음을 짧게 한 뒤 \'ㅜ\' 발음을 합니다.</string>
+    <string name="ㅡ">입을 다문 상태에서 혀를 뒤쪽에 위치하고 입술을 양 옆으로 길게 벌린 상태에서 소리를 냅니다.</string>
+    <string name="ㅢ">\'ㅡ\' 발음을 짧게 한 뒤 \'ㅣ\' 발음을 합니다.</string>
+    <string name="ㅣ">입을 다문 상태에서 혀를 앞쪽에 위치하고 입술을 양 옆으로 길게 벌린 상태에서 소리를 냅니다.</string>
+
 </resources>

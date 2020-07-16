@@ -60,20 +60,8 @@ public class FragmentsActivity extends AppCompatActivity
         viewPager.setCurrentItem(session);
         viewPager.addOnPageChangeListener(this);
 
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {}
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {}
-        });
-
         tabLayout.setupWithViewPager(viewPager);
+        viewPager.setOffscreenPageLimit(tabLayout.getTabCount());
 
     }
 
@@ -134,13 +122,19 @@ public class FragmentsActivity extends AppCompatActivity
     public void onItemClicked(char result, String style) {
         Log.d(TAG, "result : "+result);
 
+        SyllableFragment syllableFragment = (SyllableFragment)pagerAdapter.fragments.get(0);
+
+        int resId = getResources().getIdentifier(""+result, "string", getPackageName());
+
         if (style.equals(getString(R.string.consonant))) {
-            ((SyllableFragment)pagerAdapter.fragments.get(0)).textView_consonant.setText(""+result);
+            syllableFragment.textView_consonant.setText(""+result);
             //그림과 설명 바뀜 추가
+            syllableFragment.textView_explain_consonant.setText(getString(resId));
         }
         else{
-            ((SyllableFragment)pagerAdapter.fragments.get(0)).textView_vowel.setText(""+result);
+            syllableFragment.textView_vowel.setText(""+result);
             //그림과 설명 바뀜 추가
+            syllableFragment.textView_explain_vowel.setText(getString(resId));
         }
     }
 

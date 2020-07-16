@@ -62,7 +62,11 @@ public class SyllableFragment extends Fragment
         textView_consonant = view.findViewById(R.id.textView_consonant);
         textView_vowel = view.findViewById(R.id.textView_vowel);
         textView_explain_consonant = view.findViewById(R.id.textView_explain_consonant);
+        textView_explain_consonant.setText(getString(getResources()
+                .getIdentifier(textView_consonant.getText().toString(), "string", getContext().getPackageName())));
         textView_explain_vowel = view.findViewById(R.id.textView_explain_vowel);
+        textView_explain_vowel.setText(getString(getResources()
+                .getIdentifier(textView_vowel.getText().toString(), "string", getContext().getPackageName())));
         textView_feedback = view.findViewById(R.id.textView_syllable_feedback);
 
         imageView_consonant = view.findViewById(R.id.imageView_consonant);
