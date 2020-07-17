@@ -28,6 +28,7 @@
     <string name="session_syllable">음절</string>
     <string name="session_settings">설정</string>
 
+    <!--  syllable  -->
     <string name="consonant">자음</string>
     <string name="vowel">모음</string>
 
@@ -75,5 +76,18 @@
     <string name="ㅡ">입을 다문 상태에서 혀를 뒤쪽에 위치하고 입술을 양 옆으로 길게 벌린 상태에서 소리를 냅니다.</string>
     <string name="ㅢ">\'ㅡ\' 발음을 짧게 한 뒤 \'ㅣ\' 발음을 합니다.</string>
     <string name="ㅣ">입을 다문 상태에서 혀를 앞쪽에 위치하고 입술을 양 옆으로 길게 벌린 상태에서 소리를 냅니다.</string>
+
+    <!--  pronunciation  -->
+    <string name="double_vowels">이중 모음</string>
+    <string name="support_characters">받침 소리</string>
+    <string name="duple_supports">겹받침</string>
+    <string name="support_1">받침 \'ㅎ\' + \'ㄱ\',\'ㄷ\',\'ㅂ\',\'ㅈ\'</string>
+    <string name="support_2">받침 \'ㄱ\',\'ㄷ\',\'ㅂ\',\'ㅈ\' + \'ㅎ\'</string>
+    <string name="solo_double_supports">홑받침/쌍받침</string>
+
+    <!-- sentences -->
+    <string name="sentence_to_practice">여기에 연습하고싶은 문장을 적으세요.</string>
+    <string name="sentence_try_record">아래 녹음 버튼을 누르고 \n위 문장을 읽어보세요!</string>
+    <string name="sentence_result_practice">위 문장을 이렇게 말씀하셨어요!</string>
 
 </resources>

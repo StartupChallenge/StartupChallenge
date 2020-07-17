@@ -9,9 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.hoonhooney.sullivan.activities.FragmentsActivity"></activity>
-        <activity android:name="com.hoonhooney.sullivan.activities.MainActivity"
-            android:theme="@style/SplashTheme">
+        <activity android:name=".activities.FragmentsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.MainActivity"
+            android:theme="@style/SplashTheme"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

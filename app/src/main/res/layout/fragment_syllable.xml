@@ -170,7 +170,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/try_record"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView_syllable_feedback"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
@@ -196,8 +196,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.2"
-        app:layout_constraintTop_toBottomOf="@+id/textView_syllable_feedback">
+        android:layout_marginBottom="30dp">
 
         <ImageView
             android:layout_width="wrap_content"
