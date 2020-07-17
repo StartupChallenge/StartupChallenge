@@ -104,7 +104,6 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:background="@drawable/shape_textbox_round"
-        android:gravity="center"
         android:orientation="horizontal"
         android:paddingHorizontal="10dp"
         app:layout_constraintBottom_toTopOf="@+id/textView_syllable_result"
@@ -121,7 +120,7 @@
             <ImageView
                 android:id="@+id/imageView_consonant"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:layout_marginVertical="10dp"
                 android:src="@drawable/sample_tongue" />
 
@@ -150,7 +149,7 @@
             <ImageView
                 android:id="@+id/imageView_vowel"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:layout_marginVertical="10dp"
                 android:src="@drawable/sample_lips" />
 
