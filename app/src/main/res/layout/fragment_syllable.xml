@@ -130,7 +130,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="10dp"
-                android:text="솰라솰라솰라솰라솰라솰라솰라솰라솰라솰라솰라솰라솰라솰라솰라솰라솰라솰라" />
+                android:text="혀 뿌리가 목구멍을 막으며 굽어진 모양입니다." />
 
         </LinearLayout>
 
@@ -159,7 +159,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="10dp"
-                android:text="솰라솰라솰라솰라솰라솰라솰라솰라솰라솰라솰라솰라솰라솰라솰라솰라솰라솰라" />
+                android:text="입술과 턱을 가장 크게 벌린 입모양입니다." />
 
         </LinearLayout>
 
