@@ -92,5 +92,6 @@
 
     <!--  chatbot  -->
     <string name="chatbot_record">아래 녹음 버튼을 누르고 \n대화를 해보세요!</string>
+    <string name="chatbot_greeting">안녕하세요? 만나서 반가워요!</string>
 
 </resources>
