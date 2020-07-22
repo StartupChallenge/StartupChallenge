@@ -1,14 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.PronunciationFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/session_chatbot" />
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout_bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingVertical="30dp">
+
+        <TextView
+            android:id="@+id/textView_chatbot_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/chatbot_record"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal" />
+
+        <FrameLayout
+            android:id="@+id/btn_chatbot_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/shape_button_record" />
+
+            <ImageView
+                android:id="@+id/imageView_record_off"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_mic" />
+        </FrameLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

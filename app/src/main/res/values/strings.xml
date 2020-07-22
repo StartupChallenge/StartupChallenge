@@ -90,4 +90,7 @@
     <string name="sentence_try_record">아래 녹음 버튼을 누르고 \n위 문장을 읽어보세요!</string>
     <string name="sentence_result_practice">위 문장을 이렇게 말씀하셨어요!</string>
 
+    <!--  chatbot  -->
+    <string name="chatbot_record">아래 녹음 버튼을 누르고 \n대화를 해보세요!</string>
+
 </resources>
