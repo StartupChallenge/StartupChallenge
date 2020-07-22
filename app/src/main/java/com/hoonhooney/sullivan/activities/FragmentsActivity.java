@@ -109,6 +109,8 @@ public class FragmentsActivity extends AppCompatActivity
     public void onPageSelected(int position) {
         if (!isBack){
             pageStack.push(prePageIndex);
+            if(pageStack.size() > 5)
+                pageStack.remove(0);
             Log.d(TAG, "pageStack : "+pageStack);
         }
         prePageIndex = position;
