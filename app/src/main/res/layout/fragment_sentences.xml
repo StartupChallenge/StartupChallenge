@@ -45,7 +45,6 @@
                 android:gravity="center"
                 android:textAlignment="viewStart"
                 android:textColor="@color/red"
-                android:text="결과"
                 android:textSize="20sp"
                 android:layout_weight="1"
                 tools:ignore="RtlCompat" />
