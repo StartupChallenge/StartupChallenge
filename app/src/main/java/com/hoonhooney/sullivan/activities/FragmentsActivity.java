@@ -21,6 +21,7 @@ import com.hoonhooney.sullivan.fragments.SettingsFragment;
 import com.hoonhooney.sullivan.fragments.SyllableFragment;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Stack;
 
@@ -128,15 +129,60 @@ public class FragmentsActivity extends AppCompatActivity
         SyllableFragment syllableFragment = (SyllableFragment)pagerAdapter.fragments.get(0);
 
         int resId = getResources().getIdentifier(""+result, "string", getPackageName());
-
+        java.util.Map<Character, Integer> map = new HashMap<Character,Integer>(){
+            {
+                put('ㄱ',R.drawable.consonant_1);
+                put('ㄲ',R.drawable.consonant_2);
+                put('ㄴ',R.drawable.consonant_3);
+                put('ㄷ',R.drawable.consonant_4);
+                put('ㄸ',R.drawable.consonant_5);
+                put('ㄹ',R.drawable.consonant_6);
+                put('ㅁ',R.drawable.consonant_7);
+                put('ㅂ',R.drawable.consonant_8);
+                put('ㅃ',R.drawable.consonant_9);
+                put('ㅅ',R.drawable.consonant_10);
+                put('ㅆ',R.drawable.consonant_11);
+                put('ㅇ',R.drawable.consonant_12);
+                put('ㅈ',R.drawable.consonant_13);
+                put('ㅉ',R.drawable.consonant_14);
+                put('ㅊ',R.drawable.consonant_15);
+                put('ㅋ',R.drawable.consonant_16);
+                put('ㅌ',R.drawable.consonant_17);
+                put('ㅍ',R.drawable.consonant_18);
+                put('ㅎ',R.drawable.consonant_19);
+                put('ㅏ',R.drawable.vowel_1);
+                put('ㅑ',R.drawable.vowel_2);
+                put('ㅓ',R.drawable.vowel_3);
+                put('ㅕ',R.drawable.vowel_4);
+                put('ㅗ',R.drawable.vowel_5);
+                put('ㅛ',R.drawable.vowel_6);
+                put('ㅜ',R.drawable.vowel_7);
+                put('ㅠ',R.drawable.vowel_8);
+                put('ㅡ',R.drawable.vowel_9);
+                put('ㅣ',R.drawable.vowel_10);
+                put('ㅢ',R.drawable.vowel_11);
+                put('ㅐ',R.drawable.vowel_12);
+                put('ㅒ',R.drawable.vowel_13);
+                put('ㅔ',R.drawable.vowel_14);
+                put('ㅖ',R.drawable.vowel_15);
+                put('ㅘ',R.drawable.vowel_16);
+                put('ㅙ',R.drawable.vowel_17);
+                put('ㅚ',R.drawable.vowel_18);
+                put('ㅝ',R.drawable.vowel_19);
+                put('ㅞ',R.drawable.vowel_20);
+                put('ㅟ',R.drawable.vowel_21);
+            }
+        };
         if (style.equals(getString(R.string.consonant))) {
             syllableFragment.textView_consonant.setText(""+result);
             //그림과 설명 바뀜 추가
+            syllableFragment.imageView_consonant.setImageResource(map.get(result));
             syllableFragment.textView_explain_consonant.setText(getString(resId));
         }
         else{
             syllableFragment.textView_vowel.setText(""+result);
             //그림과 설명 바뀜 추가
+            syllableFragment.imageView_vowel.setImageResource(map.get(result));
             syllableFragment.textView_explain_vowel.setText(getString(resId));
         }
 

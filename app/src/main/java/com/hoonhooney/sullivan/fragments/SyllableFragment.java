@@ -67,6 +67,7 @@ public class SyllableFragment extends Fragment
         textView_feedback = view.findViewById(R.id.textView_syllable_feedback);
 
         imageView_consonant = view.findViewById(R.id.imageView_consonant);
+
         imageView_vowel = view.findViewById(R.id.imageView_vowel);
 
         strForATry = "가";
