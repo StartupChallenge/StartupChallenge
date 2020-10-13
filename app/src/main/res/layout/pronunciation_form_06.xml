@@ -1,266 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout_pron1"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragments.PronunciationFragment">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingHorizontal="50dp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/linearLayout_pron1"
+        <TextView
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@+id/textView_pron_result"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.1"
-            tools:layout_editor_absoluteX="40dp">
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:text="아래 받침들은 어말 또는 자음 앞에서 \n다음 대표음으로 발음합니다."
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20sp"
-                android:layout_marginBottom="20sp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="받침의 발음"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <FrameLayout
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.2"
-                    android:gravity="center"
-                    android:text="아래 받침들은 어말 또는 자음 앞에서 \n다음 대표음으로 발음합니다."
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <FrameLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="20sp"
-                            android:layout_marginBottom="20sp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="ㄲㅋ"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                    </FrameLayout>
-
-                    <FrameLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="20sp"
-                            android:layout_marginBottom="20sp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="ㅅㅆㅈㅊㅌ"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                    </FrameLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal">
-
-                    <FrameLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <ImageView
-                            android:id="@+id/down_arrow1"
-                            android:layout_width="50sp"
-                            android:layout_height="50sp"
-                            android:layout_weight="1"
-                            android:layout_gravity="center"
-                            android:src="@drawable/down_arrow" />
-                    </FrameLayout>
-
-                    <FrameLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <ImageView
-                            android:id="@+id/down_arrow2"
-                            android:layout_width="50sp"
-                            android:layout_height="50sp"
-                            android:layout_weight="1"
-                            android:layout_gravity="center"
-                            android:src="@drawable/down_arrow" />
-                    </FrameLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <FrameLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="20sp"
-                            android:layout_marginBottom="20sp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="ㄱ"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-                    </FrameLayout>
-
-                    <FrameLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="20sp"
-                            android:layout_marginBottom="20sp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="ㄷ"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-                    </FrameLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_weight="1">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="20sp"
-                    android:layout_marginBottom="20sp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="닦다\n옷\n덮다"
-                    android:textSize="25sp"
+                    android:layout_marginVertical="8dp"
+                    android:text="ㄲㅋ"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="20sp"
-                    android:layout_marginBottom="20sp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="[닥따]\n[옫]\n[업따]"
-                    android:textColor="@color/red"
-                    android:textSize="25sp"
+                    android:layout_marginVertical="8dp"
+                    android:text="ㅅㅆㅈㅊㅌ"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
-            </LinearLayout>
+            </FrameLayout>
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/textView_pron_result"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/pron_try_record"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/textView_pron_feedback"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout_pron1"
-            app:layout_constraintVertical_bias="0.285"
-            tools:layout_editor_absoluteX="0dp" />
+            android:layout_weight="0.5"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textView_pron_feedback"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/btn_pron_record"
-            app:layout_constraintTop_toBottomOf="@+id/textView_pron_result"
-            app:layout_constraintVertical_bias="0.1"
-            tools:layout_editor_absoluteX="0dp" />
-
-        <FrameLayout
-            android:id="@+id/btn_pron_record"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginBottom="30dp">
-
-            <ImageView
-                android:layout_width="wrap_content"
+            <FrameLayout
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:src="@drawable/shape_button_record" />
+                android:layout_weight="1">
 
-            <ImageView
-                android:id="@+id/imageView_record_off"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_mic" />
-        </FrameLayout>
+                <ImageView
+                    android:id="@+id/down_arrow1"
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/down_arrow" />
+            </FrameLayout>
 
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <ImageView
+                    android:id="@+id/down_arrow2"
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/down_arrow" />
+            </FrameLayout>
 
-</FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="8dp"
+                    android:text="ㄱ"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="8dp"
+                    android:text="ㄷ"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20sp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="닦다\n옷\n덮다"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20sp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="[닥따]\n[옫]\n[업따]"
+            android:textColor="@color/red"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

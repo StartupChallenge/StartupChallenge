@@ -37,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:onClick="SessionClick">
+                android:onClick="sessionClick">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:onClick="SessionClick">
+                android:onClick="sessionClick">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -86,7 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:onClick="SessionClick">
+                android:onClick="sessionClick">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -107,7 +107,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:onClick="SessionClick">
+                android:onClick="sessionClick">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -130,7 +130,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
-            android:onClick="SessionClick"
+            android:onClick="sessionClick"
             android:src="@drawable/ic_settings_black" />
 
     </LinearLayout>

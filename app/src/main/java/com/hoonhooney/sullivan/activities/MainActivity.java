@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 //    세션 클릭 시
-    public void SessionClick(View view) {
+    public void sessionClick(View view) {
         Intent intent = new Intent(this, FragmentsActivity.class);
 
         switch(view.getId()){
