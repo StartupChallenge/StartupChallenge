@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.util.Log;
@@ -27,9 +28,8 @@ import static com.hoonhooney.sullivan.VoiceTask.VOICE_TASK;
 
 public class PronSupportActivity extends AppCompatActivity
 {
-
     FragmentPagerAdapter adapterViewPager;
-    TextView title;
+    TextView title, textView_feedback;
     public List<List<String>> examples = new ArrayList<>();
     private int currentIdx = 0;
 
@@ -39,6 +39,9 @@ public class PronSupportActivity extends AppCompatActivity
         setContentView(R.layout.activity_pron_support);
 
         TextView title = findViewById(R.id.pronunciation_title);
+
+        TextView textView_feedback = findViewById(R.id.textView_pron_feedback);
+
         title.setText(PronunciationFragment.titlestr);
 
 

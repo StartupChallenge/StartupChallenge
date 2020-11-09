@@ -19,7 +19,8 @@ public class PronSupportFragment extends Fragment {
     private int page;   //fragment page 번호
     private List<String> words = new ArrayList<>(); //음성인식 대상 단어 list
     TextView explanation1, explanation2, explanation3, explanation4, explanation5, explanation6, explanation7,
-    explanation8, explanation9, example1, example2, example3, example4, textView_result, textView_feedback;
+    explanation8, explanation9, example1, example2, example3, example4;
+
     private FrameLayout btnRecord;
 
     private List<String> exampleList = new ArrayList<>();

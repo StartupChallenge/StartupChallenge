@@ -1,5 +1,6 @@
 package com.hoonhooney.sullivan.fragments;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.view.LayoutInflater;
@@ -30,7 +31,7 @@ import static com.hoonhooney.sullivan.VoiceTask.VOICE_TASK;
 public class SentencesFragment extends Fragment
         implements View.OnClickListener {
     public EditText inputText;
-    public TextView outputText;
+    public TextView outputText, textView_result, textview_record;
     public Button send_btn;
 
     private String html = "";
@@ -64,6 +65,8 @@ public class SentencesFragment extends Fragment
 
         inputText = view.findViewById(R.id.editText_sentence_practice);
         outputText = view.findViewById(R.id.textView_sentence_pronunciation);
+        textView_result = view.findViewById(R.id.textView_sentence_result);
+        textview_record = view.findViewById(R.id.textView_sentence_record);
 
         send_btn = view.findViewById(R.id.send_button);
         send_btn.setOnClickListener(this);
@@ -105,6 +108,17 @@ public class SentencesFragment extends Fragment
             if (results != null){
                 //구글 마이크에서 받아온 String
                 String strResult = results.get(0);
+
+                textView_result.setText(strResult);
+
+                if(strResult.contains(inputText.getText().toString())){
+                    textview_record.setText(R.string.feedback_good);
+                    textView_result.setTextColor(Color.GREEN);
+                }
+                else {
+                    textview_record.setText(R.string.feedback_bad);
+                    textView_result.setTextColor(Color.RED);
+                }
             }
         }
     }
