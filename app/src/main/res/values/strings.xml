@@ -13,6 +13,7 @@
     <string name="on_back_pressed">뒤로가기를 한 번 더 누르면 앱이 종료됩니다.</string>
     <string name="try_record">아래 녹음 버튼을 누르고 \n글자를 읽어보세요!</string>
     <string name="feedback_good">잘하셨어요! \n그 발음을 기억하셔서 다양하게 활용해 보아요!</string>
+
     <string name="feedback_bad_1">혀는 편하게 두고, \n양 입술을 가볍게 붙였다 떼면서 발음해보세요!</string> //ㅁ
     <string name="feedback_bad_2">혀로 윗잇몸을 막았다 떼면서, \n발음해보세요!</string> //ㄴ
     <string name="feedback_bad_3">앞 입천장과 혓바닥의 좁은 사이로 \n떨듯이 떼면서, 발음해보세요!</string> //ㅅ
