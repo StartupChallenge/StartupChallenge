@@ -17,7 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.PronSupportActivity"></activity>
+        <activity android:name=".activities.PronSupportActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".activities.FragmentsActivity"
             android:screenOrientation="portrait"

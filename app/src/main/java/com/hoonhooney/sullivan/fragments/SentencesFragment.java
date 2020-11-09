@@ -1,6 +1,7 @@
 package com.hoonhooney.sullivan.fragments;
 
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,8 +20,12 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.ArrayList;
 
 import com.hoonhooney.sullivan.R;
+import com.hoonhooney.sullivan.VoiceTask;
+
+import static com.hoonhooney.sullivan.VoiceTask.VOICE_TASK;
 
 public class SentencesFragment extends Fragment
         implements View.OnClickListener {
@@ -63,6 +68,8 @@ public class SentencesFragment extends Fragment
         send_btn = view.findViewById(R.id.send_button);
         send_btn.setOnClickListener(this);
 
+        view.findViewById(R.id.btn_sentence_record).setOnClickListener(this);
+
         return view;
     }
 
@@ -77,6 +84,28 @@ public class SentencesFragment extends Fragment
                     e.printStackTrace();
                 }
                 break;
+
+            case R.id.btn_sentence_record:
+                // 구글 마이크 부르기
+                VoiceTask voiceTask = new VoiceTask(this);
+                voiceTask.execute();
+                break;
+        }
+    }
+
+    //VoiceTask 결과 받는 부분
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == getActivity().RESULT_OK && requestCode == VOICE_TASK){
+            ArrayList<String> results = data
+                    .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+
+            if (results != null){
+                //구글 마이크에서 받아온 String
+                String strResult = results.get(0);
+            }
         }
     }
 

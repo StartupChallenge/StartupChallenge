@@ -6,17 +6,25 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.hoonhooney.sullivan.R;
+import com.hoonhooney.sullivan.VoiceTask;
 import com.hoonhooney.sullivan.fragments.PronSupportFragment;
 import com.hoonhooney.sullivan.fragments.PronunciationFragment;
 
+import java.util.ArrayList;
+
 import me.relex.circleindicator.CircleIndicator;
+
+import static com.hoonhooney.sullivan.VoiceTask.VOICE_TASK;
 
 public class PronSupportActivity extends AppCompatActivity
 {
@@ -39,13 +47,35 @@ public class PronSupportActivity extends AppCompatActivity
 
         CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
         indicator.setViewPager(vpPager);
+
+        findViewById(R.id.btn_pron_record).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // 구글 마이크 부르기
+                VoiceTask voiceTask = new VoiceTask(PronSupportActivity.this);
+                voiceTask.execute();
+            }
+        });
+    }
+
+    //VoiceTask 결과 받는 부분
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == RESULT_OK && requestCode == VOICE_TASK){
+            ArrayList<String> results = data
+                    .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+
+            if (results != null){
+                //구글 마이크에서 받아온 String
+                String strResult = results.get(0);
+            }
+        }
     }
 
     public static class MyPagerAdapter extends FragmentPagerAdapter {
         private static int NUM_ITEMS;
-
-
-
 
         public MyPagerAdapter(FragmentManager fragmentManager) {
             super(fragmentManager);

@@ -2,10 +2,8 @@ package com.hoonhooney.sullivan.fragments;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,8 +15,11 @@ import androidx.fragment.app.Fragment;
 
 import com.hoonhooney.sullivan.CharacterListDialog;
 import com.hoonhooney.sullivan.R;
+import com.hoonhooney.sullivan.VoiceTask;
 
 import java.util.ArrayList;
+
+import static com.hoonhooney.sullivan.VoiceTask.VOICE_TASK;
 
 public class SyllableFragment extends Fragment
         implements View.OnClickListener {
@@ -79,7 +80,8 @@ public class SyllableFragment extends Fragment
     public void onClick(View view) {
         switch(view.getId()){
             case R.id.btn_syllable_record:
-                VoiceTask voiceTask = new VoiceTask();
+                // 구글 마이크 부르기
+                VoiceTask voiceTask = new VoiceTask(this);
                 voiceTask.execute();
                 break;
 
@@ -91,55 +93,15 @@ public class SyllableFragment extends Fragment
         }
     }
 
-    public class VoiceTask extends AsyncTask<String, Integer, String> {
-        static final String TAG = "TAG : VoiceTask";
-
-        private String str = null;
-        @Override
-        protected String doInBackground(String... strings) {
-
-            try{
-                getVoice();
-            } catch (Exception e){
-                Log.e(TAG, "Exception : ", e);
-            }
-
-            return str;
-        }
-
-        @Override
-        protected void onPostExecute(String result){
-            try{
-
-            } catch(Exception e){
-                Log.e(TAG, "Exception : ", e);
-            }
-        }
-    }
-
-    private void getVoice(){
-        Intent intent = new Intent();
-        intent.setAction(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
-                RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-
-        String language = "ko-KR";
-
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, language);
-        startActivityForResult(intent, 2);
-    }
-
 //    녹음 결과에 대한 feedback 제공
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (resultCode == getActivity().RESULT_OK){
+        if (resultCode == getActivity().RESULT_OK && requestCode == VOICE_TASK){
             ArrayList<String> results = data
                     .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
 
-            String str = results.get(0);
-            
             int code_consonant = 0;
             String strConsonant = textView_consonant.getText().toString();
             String[] arrConsonants = getString(R.string.char_consonants).split(" ");
@@ -152,16 +114,20 @@ public class SyllableFragment extends Fragment
 
             strForATry = ""+combine(code_consonant, code_vowel);
 
-            textView_result.setText("'"+str+"'");
+            if (results != null){
+                //구글 마이크에서 받아온 String
+                String strResult = results.get(0);
 
-            if (strForATry.equals(str)){
-                textView_feedback.setText(getString(R.string.feedback_good));
-                textView_feedback.setTextColor(Color.GREEN);
-            }else{
-                textView_feedback.setText(getString(R.string.feedback_bad));
-                textView_feedback.setTextColor(Color.RED);
+                textView_result.setText("'"+strResult+"'");
+
+                if (strForATry.equals(strResult)){
+                    textView_feedback.setText(getString(R.string.feedback_good));
+                    textView_feedback.setTextColor(Color.GREEN);
+                }else{
+                    textView_feedback.setText(getString(R.string.feedback_bad));
+                    textView_feedback.setTextColor(Color.RED);
+                }
             }
-
         }
     }
 
