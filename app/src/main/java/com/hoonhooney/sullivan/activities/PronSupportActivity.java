@@ -7,10 +7,8 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -40,10 +38,9 @@ public class PronSupportActivity extends AppCompatActivity
 
         TextView title = findViewById(R.id.pronunciation_title);
 
-        TextView textView_feedback = findViewById(R.id.textView_pron_feedback);
+        textView_feedback = findViewById(R.id.textView_pron_feedback);
 
         title.setText(PronunciationFragment.titlestr);
-
 
         ViewPager vpPager = (ViewPager) findViewById(R.id.vpPager);
         adapterViewPager = new MyPagerAdapter(getSupportFragmentManager());
@@ -70,7 +67,6 @@ public class PronSupportActivity extends AppCompatActivity
             @Override
             public void onPageSelected(int position) {
                 currentIdx = position;
-                Log.d("examples", examples.get(currentIdx).toString());
             }
 
             @Override
@@ -92,6 +88,12 @@ public class PronSupportActivity extends AppCompatActivity
             if (results != null){
                 //구글 마이크에서 받아온 String
                 String strResult = results.get(0);
+
+                //텍스트 검사에 따른 피드백 보이기 (예시)
+                if (examples.get(currentIdx).contains(strResult))
+                    textView_feedback.setText(R.string.feedback_good);
+                else
+                    textView_feedback.setText(R.string.feedback_bad);
             }
         }
     }
