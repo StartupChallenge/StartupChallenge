@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 
 import com.hoonhooney.sullivan.R;
+import com.hoonhooney.sullivan.activities.PronSupportActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +21,8 @@ public class PronSupportFragment extends Fragment {
     TextView explanation1, explanation2, explanation3, explanation4, explanation5, explanation6, explanation7,
     explanation8, explanation9, example1, example2, example3, example4, textView_result, textView_feedback;
     private FrameLayout btnRecord;
+
+    private List<String> exampleList = new ArrayList<>();
 
     public static PronSupportFragment newInstance(int page) {
         PronSupportFragment fragment = new PronSupportFragment();
@@ -99,6 +102,8 @@ public class PronSupportFragment extends Fragment {
         int idx = page-1;
 
         View view = inflater.inflate(layoutID, container, false);
+
+        exampleList.clear();
 
         if(id[page-1]==1){
             explanation1 = view.findViewById(R.id.explanation1);
@@ -239,6 +244,22 @@ public class PronSupportFragment extends Fragment {
             example2.setText(getString(getResources()
                     .getIdentifier(strarr[idx][6],"string", getContext().getPackageName())));
         }
+
+        String[] arrExample = example1.getText().toString().split("\n");
+        for (String s : arrExample) {
+            if (!exampleList.contains(s))
+                exampleList.add(s);
+        }
+
+        if (example3 != null){
+            String[] arrExample2 = example3.getText().toString().split("\n");
+            for (String s : arrExample2) {
+                if (!exampleList.contains(s))
+                    exampleList.add(s);
+            }
+        }
+
+        ((PronSupportActivity)getActivity()).examples.add(idx , exampleList);
 
         return view;
     }

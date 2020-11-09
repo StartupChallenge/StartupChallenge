@@ -10,9 +10,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.hoonhooney.sullivan.R;
@@ -21,6 +19,7 @@ import com.hoonhooney.sullivan.fragments.PronSupportFragment;
 import com.hoonhooney.sullivan.fragments.PronunciationFragment;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import me.relex.circleindicator.CircleIndicator;
 
@@ -31,6 +30,8 @@ public class PronSupportActivity extends AppCompatActivity
 
     FragmentPagerAdapter adapterViewPager;
     TextView title;
+    public List<List<String>> examples = new ArrayList<>();
+    private int currentIdx = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,24 @@ public class PronSupportActivity extends AppCompatActivity
                 // 구글 마이크 부르기
                 VoiceTask voiceTask = new VoiceTask(PronSupportActivity.this);
                 voiceTask.execute();
+            }
+        });
+
+        vpPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                currentIdx = position;
+                Log.d("examples", examples.get(currentIdx).toString());
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
             }
         });
     }
