@@ -55,10 +55,14 @@ public class ChatAdapter extends ArrayAdapter {
             linearLayout_chatBox = row.findViewById(R.id.linearLayout_chat_user);
             textView_chat = row.findViewById(R.id.textView_chat_user);
             textView_time = row.findViewById(R.id.textView_time_user);
+            linearLayout_chatBox.setVisibility(View.VISIBLE);
+            row.findViewById(R.id.linearLayout_chat_bot).setVisibility(View.GONE);
         } else{
             linearLayout_chatBox = row.findViewById(R.id.linearLayout_chat_bot);
             textView_chat = row.findViewById(R.id.textView_chat_bot);
             textView_time = row.findViewById(R.id.textView_time_bot);
+            linearLayout_chatBox.setVisibility(View.VISIBLE);
+            row.findViewById(R.id.linearLayout_chat_user).setVisibility(View.GONE);
         }
 
         textView_chat.setText(message.getMessage());

@@ -2,13 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp">
+    android:layout_margin="16dp">
 
     <LinearLayout
         android:id="@+id/linearLayout_chat_bot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginVertical="16dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true">
 
@@ -55,8 +56,9 @@
         android:id="@+id/linearLayout_chat_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_marginVertical="16dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true">
 

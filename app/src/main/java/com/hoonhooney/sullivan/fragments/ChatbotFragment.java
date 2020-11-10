@@ -83,6 +83,7 @@ public class ChatbotFragment extends Fragment {
             if (results != null){
                 //구글 마이크에서 받아온 String
                 String strResult = results.get(0);
+                chatAdapter.add(new Chat(true, strResult));
             }
         }
     }
