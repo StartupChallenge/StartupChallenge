@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.view.View;
@@ -27,7 +28,7 @@ import static com.hoonhooney.sullivan.VoiceTask.VOICE_TASK;
 public class PronSupportActivity extends AppCompatActivity
 {
     FragmentPagerAdapter adapterViewPager;
-    TextView title, textView_feedback;
+    TextView title, textView_feedback, textView_pron_result;
     public List<List<String>> examples = new ArrayList<>();
     private int currentIdx = 0;
 
@@ -39,6 +40,7 @@ public class PronSupportActivity extends AppCompatActivity
         TextView title = findViewById(R.id.pronunciation_title);
 
         textView_feedback = findViewById(R.id.textView_pron_feedback);
+        textView_pron_result = findViewById(R.id.textView_pron_result);
 
         title.setText(PronunciationFragment.titlestr);
 
@@ -90,10 +92,18 @@ public class PronSupportActivity extends AppCompatActivity
                 String strResult = results.get(0);
 
                 //텍스트 검사에 따른 피드백 보이기 (예시)
+                textView_pron_result.setText(strResult);
+
                 if (examples.get(currentIdx).contains(strResult))
+                {
                     textView_feedback.setText(R.string.feedback_good);
+                    textView_feedback.setTextColor(Color.GREEN);
+                }
                 else
+                {
                     textView_feedback.setText(R.string.feedback_bad);
+                    textView_feedback.setTextColor(Color.RED);
+                }
             }
         }
     }

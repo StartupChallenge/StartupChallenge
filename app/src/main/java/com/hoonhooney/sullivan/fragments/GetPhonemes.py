@@ -21,14 +21,8 @@ while(True):
 
     data = client_sock.recv(1024)
     data = data.decode("utf-8")
-    # data2 = int(input("보낼 값 : "))
     data2 = g2p(data)
-    #print(data2.encode())
-    #client_sock.send(data)
-    #client_sock.send(data2.to_bytes(4, byteorder='little'))
 
-    # 값하나 보냄(사용자가 입력한 숫자)
-    # client_sock.send(data2.to_bytes(4, byteorder='little'))
     print(data2)
     client_sock.send(data2.encode())
     client_sock.close()

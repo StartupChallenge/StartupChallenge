@@ -34,7 +34,6 @@ public class SentencesFragment extends Fragment
     public TextView outputText, textView_result, textview_record;
     public Button send_btn;
 
-    private String html = "";
     private Handler mHandler;
 
     private Socket socket;
@@ -111,7 +110,9 @@ public class SentencesFragment extends Fragment
 
                 textView_result.setText(strResult);
 
-                if(strResult.contains(inputText.getText().toString())){
+                Log.w("inputText", inputText.getText().toString());
+
+                if(inputText.getText().toString().contains(strResult)){
                     textview_record.setText(R.string.feedback_good);
                     textView_result.setTextColor(Color.GREEN);
                 }
