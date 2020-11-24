@@ -130,7 +130,9 @@ public class SyllableFragment extends Fragment
 
                 textView_result.setText("'"+strResult+"'");
 
-                Log.w("cho = code_consonant", Boolean.toString(cho==code_consonant && jung==code_vowel));
+                Log.w("jung = code_vowel", Boolean.toString(jung==code_vowel));
+                Log.w("jung ", Integer.toString(jung));
+                Log.w("code_vowel ", Integer.toString(code_vowel));
 
                 if(code_consonant==cho && code_vowel == jung){
                     textView_feedback.setText(getString(R.string.feedback_good));
@@ -218,87 +220,87 @@ public class SyllableFragment extends Fragment
                 }
                 else if(code_consonant == cho && code_vowel != jung){
                     switch(code_vowel){
-                        case 19:
+                        case 0:
                             textView_feedback.setText(getString(R.string.feedback_bad_19));
                             textView_feedback.setTextColor(Color.RED);
                             break;
-                        case 20:
+                        case 1:
                             textView_feedback.setText(getString(R.string.feedback_bad_20));
                             textView_feedback.setTextColor(Color.RED);
                             break;
-                        case 21:
+                        case 2:
                             textView_feedback.setText(getString(R.string.feedback_bad_21));
                             textView_feedback.setTextColor(Color.RED);
                             break;
-                        case 22:
+                        case 3:
                             textView_feedback.setText(getString(R.string.feedback_bad_22));
                             textView_feedback.setTextColor(Color.RED);
                             break;
-                        case 23:
+                        case 4:
                             textView_feedback.setText(getString(R.string.feedback_bad_23));
                             textView_feedback.setTextColor(Color.RED);
                             break;
-                        case 24:
+                        case 5:
                             textView_feedback.setText(getString(R.string.feedback_bad_24));
                             textView_feedback.setTextColor(Color.RED);
                             break;
-                        case 25:
+                        case 6:
                             textView_feedback.setText(getString(R.string.feedback_bad_25));
                             textView_feedback.setTextColor(Color.RED);
                             break;
-                        case 26:
+                        case 7:
                             textView_feedback.setText(getString(R.string.feedback_bad_26));
                             textView_feedback.setTextColor(Color.RED);
                             break;
-                        case 27:
+                        case 8:
                             textView_feedback.setText(getString(R.string.feedback_bad_27));
                             textView_feedback.setTextColor(Color.RED);
                             break;
-                        case 28:
+                        case 9:
                             textView_feedback.setText(getString(R.string.feedback_bad_28));
                             textView_feedback.setTextColor(Color.RED);
                             break;
-                        case 29:
+                        case 10:
                             textView_feedback.setText(getString(R.string.feedback_bad_29));
                             textView_feedback.setTextColor(Color.RED);
                             break;
-                        case 30:
+                        case 11:
                             textView_feedback.setText(getString(R.string.feedback_bad_30));
                             textView_feedback.setTextColor(Color.RED);
                             break;
-                        case 31:
+                        case 12:
                             textView_feedback.setText(getString(R.string.feedback_bad_31));
                             textView_feedback.setTextColor(Color.RED);
                             break;
-                        case 32:
+                        case 13:
                             textView_feedback.setText(getString(R.string.feedback_bad_32));
                             textView_feedback.setTextColor(Color.RED);
                             break;
-                        case 33:
+                        case 14:
                             textView_feedback.setText(getString(R.string.feedback_bad_33));
                             textView_feedback.setTextColor(Color.RED);
                             break;
-                        case 34:
+                        case 15:
                             textView_feedback.setText(getString(R.string.feedback_bad_34));
                             textView_feedback.setTextColor(Color.RED);
                             break;
-                        case 35:
+                        case 16:
                             textView_feedback.setText(getString(R.string.feedback_bad_35));
                             textView_feedback.setTextColor(Color.RED);
                             break;
-                        case 36:
+                        case 17:
                             textView_feedback.setText(getString(R.string.feedback_bad_36));
                             textView_feedback.setTextColor(Color.RED);
                             break;
-                        case 37:
+                        case 18:
                             textView_feedback.setText(getString(R.string.feedback_bad_37));
                             textView_feedback.setTextColor(Color.RED);
                             break;
-                        case 38:
+                        case 19:
                             textView_feedback.setText(getString(R.string.feedback_bad_38));
                             textView_feedback.setTextColor(Color.RED);
                             break;
-                        case 39:
+                        case 20:
                             textView_feedback.setText(getString(R.string.feedback_bad_39));
                             textView_feedback.setTextColor(Color.RED);
                             break;
